@@ -1,10 +1,21 @@
+/*
+	Theme Name: test
+	Description: Ein simples WP Theme
+	Version: 1.0
+*/
+
+
+
 
 ul.nav.navbar-nav li a{
-	color: white;
+	color: red;
 }
-
-
-
+h1 {
+    color: red;
+}
+body{
+	background:lightgreen;
+}
 
 
 /**********Globals**********/
@@ -31,12 +42,11 @@ header{
 
 
 .navbar-default {
-	background-color:transparent !important;
+	background-color:transparent;
 	border-color:transparent;
 	background-image:none;
-	box-shadow:none;	
+	box-shadow:none;
 }
-
 
 /**********Footer**********/
 
