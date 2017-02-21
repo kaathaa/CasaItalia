@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-
+	<?php if( !is_front_page() ){
+		echo '<style>body.custom-background{background-image:none !important;}</style>';
+	}?>
     <?php wp_head();?>
   </head>
 

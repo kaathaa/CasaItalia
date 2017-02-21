@@ -1,17 +1,32 @@
 <?php
 
-
-
+// HTML5
+	$args = array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption'
+	);
+	add_theme_support( 'html5', $args );	
+	
+	
+	
 // Navigation
-require_once('wp_bootstrap_navwalker.php');
-register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'test' ),
-) );
-/*
-add_action( 'after_setup_theme', 'wp_register_nav' );
+	require_once('wp_bootstrap_navwalker.php');
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'test' ),
+		) 
+	);
 
-function wp_register_nav() {
-  register_nav_menu('nav_main','Navbar im Header');
-  register_nav_menu('nav_footer','Navigation im Footer');
-}
-*/
+
+	
+// Custom Background
+	$defaults = array(
+		'wp-head-callback'       => '_custom_background_cb',
+	);	
+	add_theme_support( 'custom-background', $defaults );
+
+
+
+

@@ -48,6 +48,14 @@ header{
 	box-shadow:none;
 }
 
+
+/**********Home**********/
+.home header h1,
+.home header p {
+	display: none;
+}
+
+
 /**********Footer**********/
 
 .footer {
