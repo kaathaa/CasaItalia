@@ -1,11 +1,8 @@
 <footer class="footer">
     <div class="container">
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#">Karte</a></li>
-                <li><a href="#">Impressum</a></li>
-            </ul>
-        </nav>
+		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		<?php endif; ?>
     </div>
 </footer>
 
@@ -18,3 +15,4 @@
 <?php wp_footer();?>
 </body>
 </html>
+
