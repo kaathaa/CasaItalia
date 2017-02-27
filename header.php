@@ -29,7 +29,7 @@
 	header{		
 		background:url(<?php header_image();?>) no-repeat;
 		background-size: cover;
-		height: <?php echo get_custom_header()->height; ?>px;
+		min-height: <?php echo get_custom_header()->height; ?>px;
 		width: <?php echo get_custom_header()->width; ?>
 	}
 	header p,
@@ -43,6 +43,10 @@
 	.active > a{
 		border-bottom: 2px solid <?php echo $casaItalia_color ;?>;
 		background: transparent !important;
+	}
+	footer{
+		color: <?php $footer_color = get_option('casaItalia_color_footer'); echo $footer_color; ?>;
+		background: <?php $footer_bg = get_option('casaItalia_background_footer'); echo $footer_bg; ?> !important;
 	}
 	</style>
 	

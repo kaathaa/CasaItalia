@@ -46,73 +46,10 @@
 	
 	
 	
-	
-	
-	
+// Customizer
+    require_once(get_template_directory() . '/customizer.php');	
 
 	
-	
-// Customizer	
-	function casaItalia_customize_register($wp_customize) {             
-		
-		// Section
-		$wp_customize->add_section('casaItalia_section', array(
-			'title'       => 'Headeranpassungen Casa Italia',
-			'priority'    => 2,
-			'description' => 'Weitere Anpassungen für Header und Navigation',
-		));
-		
-		
-		// Settings Schriftfarbe
-		$wp_customize->add_setting('casaItalia_color', array(
-			'default'           => 'white',
-			'sanitize_callback' => 'sanitize_text_field', 
-			'type'              => 'option',
-		));		
-		
-		// Settings Opacity
-		$wp_customize->add_setting('casaItalia_opacity', array(
-			'default'        => '0.5',
-			'sanitize_callback' => 'sanitize_text_field', 
-			'type'           => 'option',
-		));
-		
-		
-		// Control Opacity
-		$wp_customize->add_control('casaItalia_color_scheme', array(
-			'label'      => __('Transparenz', 'themename'),
-			'default'    => '0.5',
-			'section'    => 'casaItalia_section',
-			'settings'   => 'casaItalia_opacity',
-			'type'       => 'radio',
-			'choices'    => array(
-				'0.3' => 'leicht',
-				'0.5' => 'mittel',
-				'0.7' => 'stark',
-			),
-		));
-						
-		// Control Schriftfarbe
-		$wp_customize->add_control( 
-			new WP_Customize_Color_Control( 
-				$wp_customize, 
-				'casaItalia_color_control', 
-				array(
-					'label'    => 'Schriftfarbe wählen',
-					'section'  => 'casaItalia_section',
-					'settings' => 'casaItalia_color',
-				)
-			) 
-		);
-		
-	}  
-
-	add_action('customize_register', 'casaItalia_customize_register');  
-
-
-
-
-
 
 // Widgets
 	function casaItalia_widgets_init() {

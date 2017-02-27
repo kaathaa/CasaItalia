@@ -1,6 +1,6 @@
 /*
-	Theme Name: test
-	Description: Ein simples WP Theme
+	Theme Name: CasaItalia
+	Description: Theme für CasaItalia
 	Version: 1.0
 */
 
@@ -38,7 +38,7 @@ header{
 }
 .overlay{
     background: rgba(0,0,0,0.5); 
-	height: 100%;
+	padding-bottom: 30px;
 }
 
 
@@ -56,6 +56,8 @@ header{
 .navbar-default .navbar-nav > li > a:hover{
 	text-decoration: underline;
 }
+
+
 
 /**********Home**********/
 .home header h1,
