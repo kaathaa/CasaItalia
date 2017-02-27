@@ -74,5 +74,22 @@
 	    ) );
 	}
 	add_action( 'widgets_init', 'casaItalia_widgets_init' );
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 							
 						

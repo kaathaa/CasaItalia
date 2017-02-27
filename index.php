@@ -1,10 +1,20 @@
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
-		<section class="page-content">
-			<div class="page-header">
-				<h2>Seitentitel Index.php</h2>
+		<main class="index-content">
+		
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="index-header">
+				<h2><?php the_title(); ?></h2>
 			</div>
-			<p>Inhalt</p>
-		</section>
+		
+				<?php the_content(); ?>		
+				<?php endwhile; else : ?>
+					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+				<?php endif; ?>	
+				
+		</main>
 	</div><!--/.container-fluid-->
 <?php get_footer(); ?>
+
+
+
