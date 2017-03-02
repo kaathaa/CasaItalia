@@ -64,7 +64,10 @@ header{
 .home header p {
 	display: none;
 }
-
+.well {
+	background: rgba(0,0,0,0.5);
+	color: white;
+}
 
 /**********Footer**********/
 

@@ -78,8 +78,8 @@
 	
 	
 	
-	
-	
+// Last Comment Widget
+require_once(get_template_directory() . '/widget.php');	
 	
 	
 	
