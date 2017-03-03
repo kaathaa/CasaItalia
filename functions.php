@@ -86,18 +86,17 @@ require_once(get_template_directory() . '/widget.php');
 
 
 // Comments
+/*
     function casaItalia_comments( $comment, $args, $depth ) { $GLOBALS['comment'] = $comment; ?>
-
-    <li class="guestbook-comment">
-		<p class="guestbook-comment-meta"><?php __('Gepostet von', 'casaItalia') ?> <strong><?php echo get_comment_author_link(); ?></strong>
-		 am <?php echo get_comment_date("d.m.Y"); ?></p>
-     <?php comment_text(); ?>
-        
-        <div class="reply">
-            <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-         </div>
-       
-    <?php }
+		<div class="row">
+			<div class="col-md-4 guestbook-comment">
+				<p class="guestbook-comment-meta"><?php __('Gepostet von', 'casaItalia') ?> <strong><?php echo get_comment_author_link(); ?></strong>
+				 am <?php echo get_comment_date("d.m.Y"); ?></p>
+				<?php comment_text(); ?>
+			</div>    
+		</div>
+      
+<?php }*/
 	
 	
 	

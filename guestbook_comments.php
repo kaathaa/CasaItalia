@@ -9,7 +9,6 @@
 	add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
 	 
 	 
-
 	$fields = array(
 		'author' => '<p class="form-group">
 		<input class="form-control" id="author" name="author" type="text" placeholder="'. __( 'Name *', 'casaItalia' ) .'" value="" ' . $aria_req . ' /></p>',	
@@ -29,23 +28,26 @@
 
 
 
-<div class="comment-list">
- <?php if ( have_comments() ) : ?>
- 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	 <div class="navigation">
-	 <div class="nav-previous"> <?php previous_comments_link( 'Ältere Beiträge' ); ?> </div>
-	 <div class="nav-next"> <?php next_comments_link( 'Neuere Beiträge' ); ?> </div>
-	 </div>
-	<?php endif; ?>
-	 
-	<ul>
-		<?php wp_list_comments('type=all&callback=casaItalia_comments'); ?>
-	</ul>
-	 
-	<?php if ( ! comments_open() ) : ?>
-	 <p>Die Kommentare für diesen Beitrag sind geschlossen.</p>
-	<?php endif; ?>
- 
- <?php endif; ?>
-</div>
+
+
+   <?php foreach ($comments as $comment) : ?>
+   
+      <div class=" guestbook-single-comment" id="comment-<?php comment_ID() ?>">
+       
+        <p class="guestbook-comment-meta"><?php __('Gepostet von', 'casaItalia') ?> <strong><?php echo get_comment_author_link(); ?></strong>
+		 am <?php echo get_comment_date("d.m.Y"); ?></p>
+		<hr>
+         <?php comment_text() ?>
+    
+          <?php if ($comment->comment_approved == '0') : ?>
+            <strong>Achtung: Dein Kommentar muss erst noch freigegeben werden.</strong><br />
+         <?php endif; ?>
+       
+      </div>
+	  
+
+   <?php endforeach; /* end for each comment */ ?> 
+
+
+
+
