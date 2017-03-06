@@ -212,6 +212,8 @@ header p {
 }
 
 
+
+
 /**********Guestbook**********/
 form {
   margin-bottom: 5em;
@@ -246,6 +248,27 @@ form .btn:hover {
 .guestbook-comment-meta {
   padding-top: 5px;
 }
+
+
+
+
+/**********Orte**********/
+.page-orte-content {
+	background: rgb(163,184,211);
+	padding: 7px;
+	color: #23527c;
+}
+.page-orte-content h3 {
+	/*height: 68px;*/
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+@media(min-width:378px) {
+	p { color: red !important;}
+}
+
+
+
 
 
 /**********Footer**********/

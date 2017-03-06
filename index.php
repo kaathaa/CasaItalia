@@ -6,12 +6,12 @@
 			<div class="index-header">
 				<h2><?php the_title(); ?></h2>
 			</div>
-		
+		index
 				<?php the_content(); ?>		
 				<?php endwhile; else : ?>
 					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 				<?php endif; ?>	
-				
+		
 		</main>
 	</div><!--/.container-fluid-->
 <?php get_footer(); ?>

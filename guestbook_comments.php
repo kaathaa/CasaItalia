@@ -11,7 +11,7 @@
 
 	$fields = array(
 		'author' => '<p class="form-group">
-		<input class="form-control" id="author" name="author" type="text" placeholder="'. __( 'Name *', 'casaItalia' ) .'" value="" ' . $aria_req . ' /></p>',	
+		<input class="form-control" id="author" name="author" type="text" placeholder="'. __( 'Name', 'casaItalia' ) .'" value="" ' . $aria_req . ' /></p>',	
 		);
 	 
 	comment_form( array (
