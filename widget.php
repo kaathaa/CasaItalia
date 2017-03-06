@@ -68,7 +68,7 @@ class Latest_Comment_Widget extends WP_Widget
 		    	echo ' am '.$comment->comment_date.'</p>';
 		    endforeach;
 		
-			?><a class="btn btn-default" href="<?php echo get_page_link( $instance['page'] ) ?>">weiterlesen</a><?php
+			?><a class="btn btn-more hvr-bounce-in" href="<?php echo get_page_link( $instance['page'] ) ?>">Gästebuch</a><?php
 
 			echo $after_widget;
 	}

@@ -8,7 +8,28 @@
 		'gallery',
 		'caption'
 	);
-	add_theme_support( 'html5', $args );	
+	add_theme_support( 'html5', $args );
+
+
+
+
+
+// Styles & Scripts
+    add_action( 'wp_enqueue_scripts', 'casaItalia_register_styles' );
+
+    function casaItalia_register_styles() {
+        
+        wp_register_style( 'style', get_stylesheet_uri());
+        wp_enqueue_style( 'style' );
+        
+        wp_register_style( 'hover', get_template_directory_uri() . '/css/hover-min.css' );
+        wp_enqueue_style( 'hover' );
+
+
+    }
+
+
+
 	
 
 	
@@ -85,18 +106,7 @@ require_once(get_template_directory() . '/widget.php');
 
 
 
-// Comments
-/*
-    function casaItalia_comments( $comment, $args, $depth ) { $GLOBALS['comment'] = $comment; ?>
-		<div class="row">
-			<div class="col-md-4 guestbook-comment">
-				<p class="guestbook-comment-meta"><?php __('Gepostet von', 'casaItalia') ?> <strong><?php echo get_comment_author_link(); ?></strong>
-				 am <?php echo get_comment_date("d.m.Y"); ?></p>
-				<?php comment_text(); ?>
-			</div>    
-		</div>
-      
-<?php }*/
+
 	
 	
 	

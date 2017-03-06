@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
+
+
+
 	<?php wp_head();?>
 	<?php 
 	if( !is_front_page() ){
@@ -44,10 +46,12 @@
 		border-bottom: 2px solid <?php echo $casaItalia_color ;?>;
 		background: transparent !important;
 	}
+	
 	footer{
 		color: <?php $footer_color = get_option('casaItalia_color_footer'); echo $footer_color; ?>;
 		background: <?php $footer_bg = get_option('casaItalia_background_footer'); echo $footer_bg; ?> !important;
 	}
+
 	</style>
 	
 	
