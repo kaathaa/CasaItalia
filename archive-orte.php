@@ -1,12 +1,18 @@
+<?php
+ /**
+ * Template Name: Archive Orte Template
+ */
+?>
+
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 		
-		
-		
 
-		<main class="orte-content">  
+
+			<main class="orte-content">  
 			<div class="page-header">
 				<h2 class="text-center"><?php echo wp_title('');?></h2>
+				<h2 class="text-center"><?php echo the_archive_title();?></h2>
 			</div>		
 			<?php         
 			$args = array(

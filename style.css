@@ -257,14 +257,41 @@ form .btn:hover {
 	background: rgb(163,184,211);
 	padding: 7px;
 	color: #23527c;
+	max-width: 450px;
 }
 .page-orte-content h3 {
-	/*height: 68px;*/
 	font-size: 1.5em;
-	margin-bottom: 1em;
+	margin-top: 0;
+	display: inline;
+	float: left;
 }
-@media(min-width:378px) {
-	p { color: red !important;}
+.page-orte-content p {
+	clear: both;
+	padding-top: 1em;
+}
+.orte-content a:hover {
+	text-decoration: none;
+
+}
+@media(min-width:202px) {
+	.page-orte-content h3 {
+		float: right;
+	}
+}
+@media(min-width:308px) {
+	.page-orte-content h3{ 
+		font-size: 2em;
+
+	}
+	.page-orte-content {
+		padding: 1em;
+	}
+}
+.attachment-orte {
+    /*display: block;*/
+    margin: 5px auto 5px auto;	
+	float: left;
+
 }
 
 
