@@ -237,9 +237,14 @@ form .btn:hover {
   color: rgb(204, 204, 204);
 }
 .guestbook_comments_single {
-  border: 2px solid white;
+  padding: 10px;
   border-radius: 6px;
   margin-bottom: 1.5em;
+}
+@media(min-width:992px){
+	.guestbook_comments_single {
+		min-height: 300px;
+	}
 }
 .guestbook_comments {
   padding-left: 15px;
@@ -254,44 +259,40 @@ form .btn:hover {
 
 /**********Orte**********/
 .page-orte-content {
-	background: rgb(163,184,211);
-	padding: 7px;
-	color: #23527c;
-	max-width: 450px;
+	padding: 10px;
+	min-height: 205px;
+	margin-bottom: 20px;
+	background: #eee;
+	border: 1px solid #DDD;
+	background: -moz-linear-gradient(top, #EEE, #FFF);    
+	background: -webkit-linear-gradient(top, #eee, #fff);
+	background: -ms-linear-gradient(top, #eee, #fff);
+	background: -o-linear-gradient(top, #eee, #fff);
+	box-shadow: 1px 2px 4px rgba(0,0,0, .2);
+	display: block !important;
 }
 .page-orte-content h3 {
 	font-size: 1.5em;
 	margin-top: 0;
 	display: inline;
 	float: left;
+	color: #333;
 }
 .page-orte-content p {
 	clear: both;
 	padding-top: 1em;
+	color: #333;
 }
 .orte-content a:hover {
 	text-decoration: none;
-
 }
-@media(min-width:202px) {
-	.page-orte-content h3 {
-		float: right;
-	}
-}
-@media(min-width:308px) {
-	.page-orte-content h3{ 
-		font-size: 2em;
-
-	}
-	.page-orte-content {
-		padding: 1em;
-	}
+.page-orte-content h3 {
+	float: right;
+	font-size: 1.6em;
 }
 .attachment-orte {
-    /*display: block;*/
     margin: 5px auto 5px auto;	
 	float: left;
-
 }
 
 

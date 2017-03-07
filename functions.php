@@ -62,9 +62,7 @@
 	add_theme_support( 'custom-header', $defaults );
 	
 	
-	
-	
-	
+		
 	
 	
 // Post Type Orte	
@@ -79,7 +77,7 @@
         $args = array(
             'label'                 => '',
             'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', ),
+            'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
@@ -91,15 +89,14 @@
             'has_archive'           => true,		
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
-            'capability_type'       => 'page',
+			'rewrite' => array('slug' => 'staedte')
         );
         register_post_type( 'orte', $args );
 
     }
     add_action( 'init', 'casaItalia_cpt_orte', 0 );
 	
-	
-	
+
 	
 	
 	
@@ -159,7 +156,7 @@ require_once(get_template_directory() . '/widget.php');
 	
 	
 	
-	
+
 	
 	
 							
