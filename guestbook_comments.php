@@ -17,7 +17,7 @@
 	comment_form( array (
 		'fields' => apply_filters( 'comment_form_default_fields', $fields ), 
 		'comment_notes_before' => '', 
-		'comment_notes_after' => '<p class="comment-mod">Dein Kommentar wird vor der Freischaltung moderiert.</p>', 
+		'comment_notes_after' => '', 
 		'title_reply' => '',
 		'title_reply_before' => '<p>',
 		'title_reply_after' => '</p>',
@@ -27,10 +27,7 @@
 		'comment_field' => '<p><textarea id="comment" class="form-control" name="comment" placeholder="'. __( 'Erzähl wie es dir bei uns gefallen hat *', 'casaItalia' ) .'" rows="3" aria-required="true"></textarea></p>',
 	));
 
-	if(isset($_POST['%1$s'])) {
-		echo 'gesendet';
-	}
-	echo 'test';
+
  ?>
 </div>
 
@@ -47,7 +44,8 @@
 <?php $bgColor = $colors[$rand]; ?>
 
 
-	<div style="background: <?php echo $bgColor; ?>;" class="col-md-4 guestbook_comments_single">
+<div class="col-md-4">
+	<div style="background: <?php echo $bgColor; ?>;" class="guestbook_comments_single">
         <p class="guestbook-comment-meta"><?php __('Gepostet von', 'casaItalia') ?> <strong><?php echo get_comment_author_link(); ?></strong>
 		 am <?php echo get_comment_date("d.m.Y"); ?></p>
 		<hr>
@@ -57,12 +55,12 @@
             <strong>Achtung: Dein Kommentar muss erst noch freigegeben werden.</strong><br />
          <?php endif; ?>
 	</div>
-	
+</div>	
 	<?php 
-		$i++;	
-	if($i % 3 == 0){
-echo '</div><div class="row guestbook_comments">';
-	} 
+$i++;	
+if($i % 3 == 0){
+	echo '</div><div class="row guestbook_comments">';
+} 
 endwhile; ?>
 </div>
 <?php else : ?>
