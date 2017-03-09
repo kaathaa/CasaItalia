@@ -64,8 +64,8 @@ class Latest_Comment_Widget extends WP_Widget
 		    $comments = get_comments($args);
 		    foreach($comments as $comment) :
 		        echo '<p class="front-page-comment-text">'.$comment->comment_content.'</p>';
-		    	echo '<p class="front-page-comment-meta">gepostet von '.$comment->comment_author;
-		    	echo ' am '.$comment->comment_date.'</p>';
+		    	echo '<p>gepostet von '.$comment->comment_author;
+		    	echo '</p>';
 		    endforeach;
 		
 			?><a class="btn btn-more hvr-bounce-in" href="<?php echo get_page_link( $instance['page'] ) ?>">Gästebuch</a><?php

@@ -26,8 +26,6 @@
 		'name_submit' => 'commentSubmit',	 
 		'comment_field' => '<p><textarea id="comment" class="form-control" name="comment" placeholder="'. __( 'Erzähl wie es dir bei uns gefallen hat *', 'casaItalia' ) .'" rows="3" aria-required="true"></textarea></p>',
 	));
-
-
  ?>
 </div>
 

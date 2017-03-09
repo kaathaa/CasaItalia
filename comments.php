@@ -21,18 +21,18 @@
  <?php if ( have_comments() ) : ?>
  
  <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
- <div class="navigation">
- <div class="nav-previous"> <?php previous_comments_link( 'Ä̈ltere Kommentare' ); ?> </div>
- <div class="nav-next"> <?php next_comments_link( 'Neuere Kommentare' ); ?> </div>
- </div>
+	 <div class="navigation">
+	 <div class="nav-previous"> <?php previous_comments_link( 'Ä̈ltere Kommentare' ); ?> </div>
+	 <div class="nav-next"> <?php next_comments_link( 'Neuere Kommentare' ); ?> </div>
+	 </div>
  <?php endif; ?>
  
  <ul>
- <?php wp_list_comments('type=all&callback=wpv_comments'); ?>
+ 	<?php wp_list_comments('type=all&callback=wpv_comments'); ?>
  </ul>
  
  <?php if ( ! comments_open() ) : ?>
- <p>Die Kommentare für diesen Beitrag sind geschlossen.</p>
+ 	<p>Die Kommentare für diesen Beitrag sind geschlossen.</p>
  <?php endif; ?>
  
  <?php endif; ?>

@@ -11,7 +11,7 @@
 				<h2 class="text-center"><?php echo wp_title('');?></h2>
 			</div>	
 
-			<div class="row guestbook_comments">
+			<div class="row">
 				<?php $i = 0; ?>
 				
 				<?php         
@@ -28,7 +28,7 @@
 			<?php			   
 			$i++;	
 			if($i % 3 == 0){
-				echo '</div><div class="row guestbook_comments">';
+				echo '</div><div class="row">';
 			} 			   
 			endwhile; ?>			   
 			</div>				   

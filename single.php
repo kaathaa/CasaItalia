@@ -5,8 +5,8 @@
 				<h2>Seitentitel Single.php</h2>
 			</div>
 			<div class="single-content">
-			<p>Inhalt</p>
-		</div>
+				<p>Inhalt</p>
+			</div>
 		</div>
 	</div><!--/.container-fluid-->
 <?php get_footer(); ?>
