@@ -40,6 +40,7 @@
 
 
 
+
 	
 // Custom Background
 	$defaults = array(
@@ -49,6 +50,7 @@
 
 
 	
+
 	
 // Custom Header
 	$defaults = array(
@@ -72,19 +74,14 @@
             'menu_name'             => 'Orte',
             'name_admin_bar'        => 'Orte',
             'all_items'             => 'Alle Orte',
-            'add_new'               => 'Neuen Ort hinzufügen',         
+            'add_new'               => 'Neuen Ort hinzufügen',		
         );
         $args = array(
             'label'                 => '',
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
-            'hierarchical'          => false,
             'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 20,
             'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
             'can_export'            => true,
             'has_archive'           => true,		
             'exclude_from_search'   => false,
@@ -92,9 +89,79 @@
 			'rewrite' => array('slug' => 'staedte')
         );
         register_post_type( 'orte', $args );
-
     }
     add_action( 'init', 'casaItalia_cpt_orte', 0 );
+
+
+
+
+// Post Type Strände	
+    function casaItalia_cpt_beach() {
+
+        $labels = array(
+            'menu_name'             => 'Strände',
+            'name_admin_bar'        => 'Strände',
+            'all_items'             => 'Alle Strände',
+            'add_new'               => 'Neuen Strand hinzufügen',		
+        );
+        $args = array(
+            'label'                 => '',
+            'labels'                => $labels,
+            'supports'              => array( 'title', 'editor', 'thumbnail'),
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,		
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+			'rewrite' => array('slug' => 'straende')
+
+        );
+        register_post_type( 'beach', $args );
+    }
+    add_action( 'init', 'casaItalia_cpt_beach', 0 );
+
+
+
+
+
+
+// Post Type Orte	
+    function casaItalia_cpt_rain() {
+
+        $labels = array(
+            'menu_name'             => 'Schlechtwetter',
+            'name_admin_bar'        => 'Schlechtwetter',
+            'all_items'             => 'Alle Schlechtwettertipps',
+            'add_new'               => 'Neuen Schlechtwettertipp hinzufügen',		
+        );
+        $args = array(
+            'label'                 => '',
+            'labels'                => $labels,
+            'supports'              => array( 'title', 'editor', 'thumbnail'),
+            'public'                => true,
+            'show_in_admin_bar'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,		
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+			'rewrite' => array('slug' => 'staedte')
+        );
+        register_post_type( 'rain', $args );
+    }
+    add_action( 'init', 'casaItalia_cpt_rain', 0 );
+
+
+
+
+
+
+
+
 	
 
 	
@@ -103,7 +170,8 @@
 	
 // Beitragsbilder
 	add_theme_support('post-thumbnails');
-	add_image_size( 'orte', 105, 68 );
+	add_image_size( 'card', 105, 68 );
+	add_image_size( 'half-card', 220, 220, array( 'left', 'top' ) );
 	
 	
 	

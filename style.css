@@ -132,7 +132,11 @@ body {
 h1 {
   font-family: 'Pacifico', cursive;
 }
-
+h2 {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-size: 2.5em;
+}
 
 
 /**********Header**********/
@@ -146,7 +150,7 @@ header p {
 	margin-left: 15px;
 }
 .overlay{
-  background: rgba(0,0,0,0.5); 
+	background: rgba(0,0,0,0.5); 
 	padding-bottom: 30px;
 }
 
@@ -189,7 +193,8 @@ header p {
   background: none;
   border: 2px solid white;
   color: white;
-  text-transform: uppercase;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4em;
   margin-top: 1.9em;
   padding: 0.9em;
 }
@@ -257,8 +262,14 @@ form .btn:hover {
 
 
 
+<<<<<<< HEAD
 /**********Orte**********/
 .page-orte-content {
+=======
+/**********Orte, Strände**********/
+.page-orte-content,
+.page-straende-content {
+>>>>>>> 98143105bee40ea8559bc9f0a6ace015851ef13e
 	padding: 10px;
 	min-height: 205px;
 	margin-bottom: 20px;
@@ -271,20 +282,27 @@ form .btn:hover {
 	box-shadow: 1px 2px 4px rgba(0,0,0, .2);
 	display: block !important;
 }
-.page-orte-content h3 {
+.page-orte-content h3,
+.page-straende-content h3 {
 	font-size: 1.5em;
+<<<<<<< HEAD
 	margin-top: 0;
 	display: inline;
 	float: left;
+=======
+	margin-top: 1em;
+>>>>>>> 98143105bee40ea8559bc9f0a6ace015851ef13e
 	color: #333;
 }
-.page-orte-content p {
+.page-orte-content p,
+.page-straende-content p {
 	clear: both;
 	padding-top: 1em;
 	color: #333;
 }
 .orte-content a:hover {
 	text-decoration: none;
+<<<<<<< HEAD
 }
 .page-orte-content h3 {
 	float: right;
@@ -294,7 +312,40 @@ form .btn:hover {
     margin: 5px auto 5px auto;	
 	float: left;
 }
+=======
+}
+@media(min-width:317px) {
+  .page-orte-content h3,
+  .page-straende-content h3 {
+  	float: right;
+  	font-size: 1.6em;
+    margin-top: 0;
+  }
+  .attachment-card {
+    float: left;
+  }
+}
+.attachment-card {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
 
+>>>>>>> 98143105bee40ea8559bc9f0a6ace015851ef13e
+
+
+
+
+
+
+/**********Schlechtwetter**********/
+.attachment-half-card{
+    
+}
+.page-rain-content {
+  background: lightblue;
+  width:50%;
+}
 
 
 
