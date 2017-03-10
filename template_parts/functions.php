@@ -82,9 +82,9 @@
             'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
             'public'                => true,
             'show_in_admin_bar'     => true,
-			'menu_icon'             => 'dashicons-location',
             'can_export'            => true,
-            'has_archive'           => true,		
+            'has_archive'           => true,
+'menu_icon'             => 'dashicons-format-video',			
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
 			'rewrite' => array('slug' => 'staedte')
@@ -115,12 +115,12 @@
             'show_in_menu'          => true,
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
-			'menu_icon'             => 'dashicons-palmtree',
             'can_export'            => true,
             'has_archive'           => true,		
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
 			'rewrite' => array('slug' => 'straende')
+
         );
         register_post_type( 'beach', $args );
     }
@@ -149,7 +149,6 @@
             'can_export'            => true,
             'has_archive'           => true,		
             'exclude_from_search'   => false,
-			'menu_icon'             => 'dashicons-cloud',
             'publicly_queryable'    => true,
 			'rewrite' => array('slug' => 'staedte')
         );
@@ -157,13 +156,22 @@
     }
     add_action( 'init', 'casaItalia_cpt_rain', 0 );
 
+
+
+
+
+
+
+
+	
+
+	
 	
 	
 	
 // Beitragsbilder
 	add_theme_support('post-thumbnails');
 	add_image_size( 'card', 105, 68 );
-	add_image_size( 'gallery', 300, 199 );
 	add_image_size( 'half-card', 220, 220, array( 'left', 'top' ) );
 	
 	
@@ -210,43 +218,8 @@ require_once(get_template_directory() . '/widget.php');
 
 
 	
-// Filter Gallery - Bootstrap	
-	function my_gallery_shortcode( $output = '', $atts, $instance ) {
-		$return = $output; // fallback
-
-		// retrieve content of your own gallery function	
-		$atts = array_merge(array('columns' => 3), $atts);
-		$columns = $atts['columns'];
-		$images = explode(',', $atts['ids']);
-		$col_class = 'col-xs-12 col-sm-4 gallery-item'; // default 3 columns 
-		
-		$i = 0;
-		foreach ($images as $key => $value) {
-
-			if ($i%$columns == 0 && $i > 0) {
-				$return .= '</div><div class="row">';
-			}
-
-			$image_attributes = wp_get_attachment_image_src($value, 'gallery');
-		
-			$return .= '
-				<div class="'.$col_class.'">
-					<a data-gallery="gallery" href="'.$image_attributes[0].'">
-						<img src="'.$image_attributes[0].'" alt="" class="img-responsive aligncenter">
-					</a>
-				</div>';
-
-			$i++;
-		}
 	
-		// boolean false = empty
-		if( !empty( $my_result ) ) {
-			$return = $my_result;
-		}
-
-		return $return;
-	}
-	add_filter( 'post_gallery', 'my_gallery_shortcode', 10, 3 );
+	
 	
 	
 	

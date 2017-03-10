@@ -1,34 +1,29 @@
 <?php
  /**
- * Template Name: Page-Orte
+ * Template Name: Page-Strände
  */
 ?>
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 		
 		<main class="orte-content">  
-		
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>		
-				<?php endwhile; else : ?>
-					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-				<?php endif; ?>		
-		
-		
+			<div class="page-header">
+				<h2 class="text-center"><?php echo wp_title('');?></h2>
+			</div>	
 
 			<div class="row">
 				<?php $i = 0; ?>
 				
 				<?php         
 				$args = array(
-					post_type => 'orte',
+					post_type => 'beach',
 					posts_per_page => 3
 				);
 				
-				$loopOrte = new WP_Query($args);
-
-				if ( $loopOrte->have_posts() ) : while ( $loopOrte->have_posts() ) : $loopOrte->the_post(); ?>
-				   <?php get_template_part('template_parts/content', 'orte');?>
+				$loopBeach = new WP_Query($args);
+				
+				if ( $loopBeach->have_posts() ) : while ( $loopBeach->have_posts() ) : $loopBeach->the_post(); ?>
+				   <?php get_template_part('template_parts/content', 'straende');?>
 			   
 			<?php			   
 			$i++;	

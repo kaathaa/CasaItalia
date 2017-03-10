@@ -133,10 +133,26 @@ h1 {
   font-family: 'Pacifico', cursive;
 }
 h2 {
-	margin-top: 2em;
-	margin-bottom: 2em;
 	font-size: 2.5em;
 }
+
+@media(min-width:768px) {
+	.page-content p {
+		max-width: 70%;
+		margin: auto;
+	}
+}
+
+
+
+
+/**********Gallery**********/
+.gallery-item {
+	text-align: center;
+}
+
+
+
 
 
 /**********Header**********/
@@ -153,6 +169,7 @@ header p {
 	background: rgba(0,0,0,0.5); 
 	padding-bottom: 30px;
 }
+
 
 
 
@@ -262,14 +279,9 @@ form .btn:hover {
 
 
 
-<<<<<<< HEAD
-/**********Orte**********/
-.page-orte-content {
-=======
 /**********Orte, Strände**********/
 .page-orte-content,
 .page-straende-content {
->>>>>>> 98143105bee40ea8559bc9f0a6ace015851ef13e
 	padding: 10px;
 	min-height: 205px;
 	margin-bottom: 20px;
@@ -279,19 +291,13 @@ form .btn:hover {
 	background: -webkit-linear-gradient(top, #eee, #fff);
 	background: -ms-linear-gradient(top, #eee, #fff);
 	background: -o-linear-gradient(top, #eee, #fff);
-	box-shadow: 1px 2px 4px rgba(0,0,0, .2);
+	box-shadow: 1px 10px 10px -10px rgba(0,0,0,.5) !important;
 	display: block !important;
 }
 .page-orte-content h3,
 .page-straende-content h3 {
 	font-size: 1.5em;
-<<<<<<< HEAD
-	margin-top: 0;
-	display: inline;
-	float: left;
-=======
 	margin-top: 1em;
->>>>>>> 98143105bee40ea8559bc9f0a6ace015851ef13e
 	color: #333;
 }
 .page-orte-content p,
@@ -302,17 +308,9 @@ form .btn:hover {
 }
 .orte-content a:hover {
 	text-decoration: none;
-<<<<<<< HEAD
 }
-.page-orte-content h3 {
-	float: right;
-	font-size: 1.6em;
-}
-.attachment-orte {
-    margin: 5px auto 5px auto;	
-	float: left;
-}
-=======
+.page-orte-content:hover {
+	background: rgb(239,239,239);
 }
 @media(min-width:317px) {
   .page-orte-content h3,
@@ -331,10 +329,6 @@ form .btn:hover {
     margin-left: auto;
 }
 
->>>>>>> 98143105bee40ea8559bc9f0a6ace015851ef13e
-
-
-
 
 
 
@@ -346,6 +340,10 @@ form .btn:hover {
   background: lightblue;
   width:50%;
 }
+
+
+
+
 
 
 
