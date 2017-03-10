@@ -6,24 +6,25 @@
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 		
-		<main class="orte-content">  
-			<div class="page-header">
-				<h2 class="text-center"><?php echo wp_title('');?></h2>
-			</div>	
+		<main>  
 
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<div class="row"><?php the_content(); ?></div>	
+			<?php endwhile; else : ?>
+				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<?php endif; ?>	
+			
 			<div class="row">
 				<?php $i = 0; ?>
 				
 				<?php         
 				$args = array(
 					post_type => 'beach',
-					posts_per_page => 3
-				);
-				
+				);				
 				$loopBeach = new WP_Query($args);
 				
 				if ( $loopBeach->have_posts() ) : while ( $loopBeach->have_posts() ) : $loopBeach->the_post(); ?>
-				   <?php get_template_part('template_parts/content', 'straende');?>
+				   <?php get_template_part('template_parts/content');?>
 			   
 			<?php			   
 			$i++;	

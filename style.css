@@ -280,8 +280,7 @@ form .btn:hover {
 
 
 /**********Orte, Strände**********/
-.page-orte-content,
-.page-straende-content {
+.page-content {
 	padding: 10px;
 	min-height: 205px;
 	margin-bottom: 20px;
@@ -294,27 +293,24 @@ form .btn:hover {
 	box-shadow: 1px 10px 10px -10px rgba(0,0,0,.5) !important;
 	display: block !important;
 }
-.page-orte-content h3,
-.page-straende-content h3 {
+.page-content h3 {
 	font-size: 1.5em;
 	margin-top: 1em;
 	color: #333;
 }
-.page-orte-content p,
-.page-straende-content p {
+.page-content p {
 	clear: both;
 	padding-top: 1em;
 	color: #333;
 }
-.orte-content a:hover {
+.page-content a:hover {
 	text-decoration: none;
 }
-.page-orte-content:hover {
+.page-content:hover {
 	background: rgb(239,239,239);
 }
 @media(min-width:317px) {
-  .page-orte-content h3,
-  .page-straende-content h3 {
+  .page-content h3{
   	float: right;
   	font-size: 1.6em;
     margin-top: 0;

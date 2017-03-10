@@ -6,13 +6,13 @@
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 		
-		<main class="orte-content">  
+		<main>  
 		
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>		
-				<?php endwhile; else : ?>
-					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-				<?php endif; ?>		
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<div class="row"><?php the_content(); ?></div>
+			<?php endwhile; else : ?>
+				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<?php endif; ?>		
 		
 		
 
@@ -22,13 +22,12 @@
 				<?php         
 				$args = array(
 					post_type => 'orte',
-					posts_per_page => 3
 				);
 				
 				$loopOrte = new WP_Query($args);
 
 				if ( $loopOrte->have_posts() ) : while ( $loopOrte->have_posts() ) : $loopOrte->the_post(); ?>
-				   <?php get_template_part('template_parts/content', 'orte');?>
+				   <?php get_template_part('template_parts/content');?>
 			   
 			<?php			   
 			$i++;	
