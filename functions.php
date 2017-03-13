@@ -33,7 +33,7 @@
 // Navigation
 	require_once('wp_bootstrap_navwalker.php');
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'test' ),
+		'primary' => __( 'Primary Menu', 'CasaItalia' ),
 		'widget' => 'Widget Menu',
 		) 
 	);
@@ -187,12 +187,13 @@
 	        'before_title'  => '<h3 class="widget-title">',
 	        'after_title'   => '</h3>',
 	    ) );
-	 
+		
+
 	    register_sidebar( array(
 	        'name'          => __( 'Footer Widget Area', 'casaItalia' ),
 	        'id'            => 'sidebar-2',
 	        'description'   => __( 'Appears in the footer section of the site.', 'casaItalia' ),
-	        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	        'before_widget' => '<div id="%1$s" class="widget col-xs-6 %2$s">',
 	        'after_widget'  => '</div>',
 	        'before_title'  => '<h4 class="widget-title">',
 	        'after_title'   => '</h4>',
@@ -204,8 +205,9 @@
 	
 	
 // Last Comment Widget
-require_once(get_template_directory() . '/widget.php');	
-
+	require_once(get_template_directory() . '/widget.php');	
+// Weather Widget
+	require_once(get_template_directory() . '/widget-weather.php');	
 
 
 

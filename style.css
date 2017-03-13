@@ -127,7 +127,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 80px;
+  margin-bottom: 200px;
   padding-bottom: 200px;
 }
 h1 {
@@ -201,7 +201,7 @@ header p {
 .front-page-well {
 	background: rgba(0,0,0,0.5);
 	color: white;
-  margin-right: 15px;
+	margin-right: 15px;
 }
 @media(min-width:768px){
   .front-page-well {
@@ -359,20 +359,34 @@ form .btn:hover {
 
 /**********Footer**********/
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 80px;
-}
-.footer .widget{
-	display: inline-block;
-	float: left;	
-	width:50%;
-}
-.footer .widget:nth-child(2) {
-   float:right;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
 }
 .footer a,
 .footer li {
-  color: rgb(204, 204, 204);
+	color: rgb(204, 204, 204);
+}
+#weather_widget-2 {
+	margin-top: 6px;
+}
+@media(max-width:800px) {
+	.footer {
+	height: 300px;
+	}
+	.widget_nav_menu {
+		margin-top: 10px;
+	}
+}
+@media(max-width:360px) {
+
+	footer .container {
+		padding: 0;
+		margin: 0;
+	}
+	.widget {
+		width: 100%;
+		display: block;
+	}
 }

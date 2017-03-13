@@ -56,23 +56,22 @@ class Latest_Comment_Widget extends WP_Widget
 			echo $before_title . $title . $after_title;
 		}
 		
-			// Get the latest comment						
-		    $args = array(
-		            'number' => '1',
-		            'post_id' => $post->ID,
-		    );
-		    $comments = get_comments($args);
-		    foreach($comments as $comment) :
-		        echo '<p class="front-page-comment-text">'.$comment->comment_content.'</p>';
-		    	echo '<p>gepostet von '.$comment->comment_author;
-		    	echo '</p>';
-		    endforeach;
-		
-			?><a class="btn btn-more hvr-bounce-in" href="<?php echo get_page_link( $instance['page'] ) ?>">Gästebuch</a><?php
-
-			echo $after_widget;
-	}
+		// Get the latest comment						
+		$args = array(
+				'number' => '1',
+				'post_id' => $post->ID,
+		);
+		$comments = get_comments($args);
+		foreach($comments as $comment) :
+			echo '<p class="front-page-comment-text">'.$comment->comment_content.'</p>';
+			echo '<p>gepostet von '.$comment->comment_author;
+			echo '</p>';
+		endforeach;
 	
+		?><a class="btn btn-more hvr-bounce-in" href="<?php echo get_page_link( $instance['page'] ) ?>">Gästebuch</a><?php
+
+		echo $after_widget;
+	}	
 }
 
 add_action('widgets_init', function()
