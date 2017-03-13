@@ -1,14 +1,16 @@
 <div class="comment-form">
 <?php 
+
 	function wpb_move_comment_field_to_bottom( $fields ) {
 		$comment_field = $fields['comment'];
 		unset( $fields['comment'] );
 		$fields['comment'] = $comment_field;
 		return $fields;
 	}
-	add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
-	 
 
+	add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+	
+	
 	$fields = array(
 		'author' => '<p class="form-group">
 		<input class="form-control" id="author" name="author" type="text" placeholder="'. __( 'Name', 'casaItalia' ) .'" value="" ' . $aria_req . ' /></p>',	

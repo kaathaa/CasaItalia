@@ -1,17 +1,21 @@
 <?php
  /**
- * Template Name: Page-Schlechtwetter
+ * Template Name: Half-Card
  */
 ?>
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 		
-		<main class="rain-content">  
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); ?>		
-			<?php endwhile; else : ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			<?php endif; ?>	
+		<main>  
+			<div class="row">
+				<div class="page-content">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>	
+					<?php endwhile; else : ?>
+						<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+					<?php endif; ?>
+				</div>	
+			</div>	
 
 			
 			<?php         
@@ -24,8 +28,8 @@
 			
 			if ( $loopRain->have_posts() ) : while ( $loopRain->have_posts() ) : $loopRain->the_post(); ?>
 
-				<div class="row">
-					<?php get_template_part('template_parts/content', 'rain');?>
+				<div class="row divider">
+					<?php get_template_part('template_parts/content', 'half-card');?>
 				</div>	
 
 			<?php endwhile; ?>			    
@@ -36,3 +40,4 @@
 		</main>
 	</div><!--/.container-fluid-->
 <?php get_footer(); ?>
+

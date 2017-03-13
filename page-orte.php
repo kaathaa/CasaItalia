@@ -1,6 +1,6 @@
 <?php
  /**
- * Template Name: Page-Orte
+ * Template Name: Orte
  */
 ?>
 <?php get_header(); ?>
@@ -8,11 +8,15 @@
 		
 		<main>  
 		
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="row"><?php the_content(); ?></div>
-			<?php endwhile; else : ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			<?php endif; ?>		
+			<div class="row">
+				<div class="page-content">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>	
+					<?php endwhile; else : ?>
+						<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+					<?php endif; ?>
+				</div>	
+			</div>	
 		
 		
 

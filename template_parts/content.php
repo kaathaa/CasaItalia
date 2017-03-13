@@ -7,21 +7,21 @@
 		foreach ( $link_values as $key => $value ) { ?>
 			<div class="col-sm-4">
 			<a href="<?php echo $value; ?>" target="_blank">
-				<div class="page-content">						
+				<article class="article-content">						
 					<?php the_post_thumbnail( 'card', array('aligncenter') ); ?>
 					<h3><?php the_title();?></h3>
 					<?php the_content();?>									
-				</div>
+				</article>
 			</a>
 			</div>
 		<?php } 
 	} else { ?>
 		<div class="col-sm-4">
-			<div class="page-content">																	
+			<article class="article-content">																	
 				<?php the_post_thumbnail( 'card', array('aligncenter') ); ?>
 				<h3><?php the_title();?></h3>
 				<?php the_content();?>																
-			</div>
+			</article>
 		</div>
 	<?php } ?>
 

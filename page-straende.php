@@ -1,19 +1,22 @@
 <?php
  /**
- * Template Name: Page-Strände
+ * Template Name: Strände
  */
 ?>
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 		
 		<main>  
+			<div class="row">
+				<div class="page-content">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>	
+					<?php endwhile; else : ?>
+						<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+					<?php endif; ?>
+				</div>	
+			</div>			
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="row"><?php the_content(); ?></div>	
-			<?php endwhile; else : ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			<?php endif; ?>	
-			
 			<div class="row">
 				<?php $i = 0; ?>
 				
@@ -38,6 +41,7 @@
 				<?php get_template_part('template_parts/content','error');?>
 			<?php endif; wp_reset_postdata(); ?>
 	
+
 		</main>
 	</div><!--/.container-fluid-->
 <?php get_footer(); ?>

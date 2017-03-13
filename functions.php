@@ -131,7 +131,7 @@
 
 
 
-// Post Type Orte	
+// Post Type Schlechtwetter	
     function casaItalia_cpt_rain() {
 
         $labels = array(
@@ -162,10 +162,11 @@
 	
 // Beitragsbilder
 	add_theme_support('post-thumbnails');
-	add_image_size( 'card', 105, 68 );
+	add_image_size( 'card', 150, 101 );
 	add_image_size( 'gallery', 300, 199 );
-	add_image_size( 'half-card', 220, 220, array( 'left', 'top' ) );
-	
+	//add_image_size( 'half-card', 300, 201, array( 'left', 'top' ) );
+	add_image_size( 'half-card', 600, 250);
+
 	
 	
 	
