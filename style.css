@@ -87,7 +87,7 @@ a img.aligncenter {
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
-        white-space: nowrap;
+    white-space: nowrap;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
@@ -144,16 +144,48 @@ h2 {
   .page-content {
     margin: 4em 1em;
   }
+  .page-content p:last-of-type {
+	margin-bottom: 3em;
+  }
 }
 
 
 
 
 /**********Gallery**********/
+	.gallery .gallery-item {
+		float: left;
+		margin: 0;
+		text-align: center;
+		padding: 6px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.gallery {
+		line-height: 1;
+	}
+	.mce-content-body [contentEditable="false"] {
+		cursor: default;
+	}
+.gallery-columns-3 .gallery-item {
+    width: 33.333%;
+}
 .gallery-item {
-	text-align: center;
+	float: left;
 }
 
+@media(max-width:525px) {
+	.gallery-columns-3 .gallery-item {
+		width: 50%;
+	}
+}
+@media(max-width:366px) {
+	.gallery-columns-3 .gallery-item {
+		width: 100%;
+	}
+
+}
 
 
 
@@ -170,9 +202,11 @@ header p {
 }
 .overlay{
 	background: rgba(0,0,0,0.5); 
-	padding-bottom: 30px;
+	height: 100%;
 }
-
+.header-text{
+	padding-bottom: 4.5em;
+}
 
 
 

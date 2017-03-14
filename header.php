@@ -15,13 +15,15 @@
 	<?php wp_head();?>
 	<?php 
 	if( !is_front_page() ){
-		echo '<style>body.custom-background{background-image:none !important;}</style>';
+		echo '<style>body.custom-background{background-image:none !important;}
+			</style>';
 	} elseif(is_front_page()) {
 		echo '<style>
 				header{background:none !important;}
 				.overlay {
     				background: rgba(0,0,0,0) !important;
 				}
+				body{padding-bottom: 0 !important;}
 				</style>';
 	}
 	?>
@@ -62,7 +64,9 @@
 		<header>
 			<div class="overlay">
 	            <?php get_template_part('template_parts/navi'); ?>
+				<div class="header-text">
 				<h1><a href="<?php echo home_url('/') ?>"><?php bloginfo( 'name' ); ?></a></h1>
-	            <p><?php bloginfo('description'); ?></p>			
+	            <p><?php bloginfo('description'); ?></p>
+				</div>
 			</div>	
 		</header>

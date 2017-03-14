@@ -80,14 +80,18 @@
             'label'                 => '',
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
+            'hierarchical'          => false,
             'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
             'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
 			'menu_icon'             => 'dashicons-location',
             'can_export'            => true,
             'has_archive'           => true,		
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
-			'rewrite' => array('slug' => 'staedte')
+			'rewrite' => array('slug' => 'orte')
         );
         register_post_type( 'orte', $args );
     }
@@ -120,7 +124,7 @@
             'has_archive'           => true,		
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
-			'rewrite' => array('slug' => 'straende')
+			'rewrite' => array('slug' => 'beach')
         );
         register_post_type( 'beach', $args );
     }
@@ -151,7 +155,7 @@
             'exclude_from_search'   => false,
 			'menu_icon'             => 'dashicons-cloud',
             'publicly_queryable'    => true,
-			'rewrite' => array('slug' => 'staedte')
+			'rewrite' => array('slug' => 'rain')
         );
         register_post_type( 'rain', $args );
     }
@@ -212,7 +216,7 @@
 
 
 
-	
+/*	
 // Filter Gallery - Bootstrap	
 	function my_gallery_shortcode( $output = '', $atts, $instance ) {
 		$return = $output; // fallback
@@ -221,7 +225,7 @@
 		$atts = array_merge(array('columns' => 3), $atts);
 		$columns = $atts['columns'];
 		$images = explode(',', $atts['ids']);
-		$col_class = 'col-xs-12 col-sm-4 gallery-item'; // default 3 columns 
+		$col_class = 'col-xs-12 col-sm-3 gallery-item'; // default 3 columns 
 		
 		$i = 0;
 		foreach ($images as $key => $value) {
@@ -250,7 +254,7 @@
 		return $return;
 	}
 	add_filter( 'post_gallery', 'my_gallery_shortcode', 10, 3 );
-	
+*/	
 	
 	
 	

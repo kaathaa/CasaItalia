@@ -7,7 +7,7 @@
 		<!-- Seiteninhalt -->
 		
 		<main>  
-		
+
 			<div class="row">
 				<div class="page-content">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -18,8 +18,6 @@
 				</div>	
 			</div>	
 		
-		
-
 			<div class="row">
 				<?php $i = 0; ?>
 				
