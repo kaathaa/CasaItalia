@@ -1,5 +1,3 @@
-
-
 	<?php
 	$link_values = get_post_custom_values( 'Link' );
 
@@ -24,5 +22,4 @@
 			</article>
 		</div>
 	<?php } ?>
-
 

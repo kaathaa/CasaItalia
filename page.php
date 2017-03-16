@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 		<!-- Seiteninhalt -->
 
-		<main>		
+		<main>	
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part('template_parts/content', 'content'); ?>
 				<?php endwhile; else : ?>

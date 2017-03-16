@@ -80,12 +80,8 @@
             'label'                 => '',
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
-            'hierarchical'          => false,
             'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
             'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
 			'menu_icon'             => 'dashicons-location',
             'can_export'            => true,
             'has_archive'           => true,		
@@ -168,8 +164,8 @@
 	add_theme_support('post-thumbnails');
 	add_image_size( 'card', 150, 101 );
 	add_image_size( 'gallery', 300, 199 );
-	//add_image_size( 'half-card', 300, 201, array( 'left', 'top' ) );
-	add_image_size( 'half-card', 600, 250);
+	add_image_size( 'half-card', 600, 250, array( 'left', 'top' ) );
+
 
 	
 	

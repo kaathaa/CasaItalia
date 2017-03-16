@@ -23,7 +23,10 @@
 				.overlay {
     				background: rgba(0,0,0,0) !important;
 				}
-				body{padding-bottom: 0 !important;}
+				body{
+					padding-bottom: 0 !important;
+					margin-bottom: 0;
+				}
 				</style>';
 	}
 	?>
