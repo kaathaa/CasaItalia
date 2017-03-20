@@ -21,16 +21,15 @@
 			<?php         
 			$args = array(
 				post_type => 'rain',
-				posts_per_page => 3
 			);
 			
 			$loopRain = new WP_Query($args);
 			
 			if ( $loopRain->have_posts() ) : while ( $loopRain->have_posts() ) : $loopRain->the_post(); ?>
 
-				<div class="row divider">
-					<?php get_template_part('template_parts/content', 'half-card');?>
-				</div>	
+			
+					<?php get_template_part('template_parts/content' );?>
+			
 
 			<?php endwhile; ?>			    
 			<?php else : ?>

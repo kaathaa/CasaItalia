@@ -56,14 +56,23 @@ class Latest_Comment_Widget extends WP_Widget
 			echo $before_title . $title . $after_title;
 		}
 		
-		// Get the latest comment						
+		// Get the latest comment			
 		$args = array(
 				'number' => '1',
 				'post_id' => $post->ID,
 		);
 		$comments = get_comments($args);
 		foreach($comments as $comment) :
-			echo '<p class="front-page-comment-text">'.$comment->comment_content.'</p>';
+		
+			// only the first words
+			if(strlen($comment->comment_content) < 30) {
+				$commentExcerpt = preg_replace("/[^ ]*$/", '', substr($comment->comment_content, 0, 230));
+			} else {
+				$commentExcerpt = $comment->comment_content;
+			}	
+			
+			echo '<p class="front-page-comment-text">'.$commentExcerpt;
+			echo '... <a href="'. get_page_link( $instance['page'] ).'">weiterlesen</a></p>';
 			echo '<p>gepostet von '.$comment->comment_author;
 			echo '</p>';
 		endforeach;
