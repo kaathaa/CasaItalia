@@ -15,17 +15,25 @@
 
 
 // Styles & Scripts
-    add_action( 'wp_enqueue_scripts', 'casaItalia_register_styles' );
-
-    function casaItalia_register_styles() {
-        
+    function casaItalia_register_styles() {       
         wp_register_style( 'style', get_stylesheet_uri());
         wp_enqueue_style( 'style' );
         
         wp_register_style( 'hover', get_template_directory_uri() . '/css/hover-min.css' );
         wp_enqueue_style( 'hover' );
+		
+		wp_register_style( 'lightbox', get_template_directory_uri() . '/css/lightbox.css' );
+        wp_enqueue_style( 'lightbox' );
     }
-
+	add_action( 'wp_enqueue_scripts', 'casaItalia_register_styles' );
+	
+	
+	function casaItalia_register_scripts(){
+		wp_register_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js' );
+        wp_enqueue_script( 'lightbox' );
+	}
+	add_action('wp_enqueue_scripts', 'casaItalia_register_scripts');
+	
 
 
 	

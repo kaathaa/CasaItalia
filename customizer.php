@@ -15,6 +15,19 @@
 			'type'              => 'option',
 		));	
 		
+		// Control Schriftfarbe
+		$wp_customize->add_control( 
+			new WP_Customize_Color_Control( 
+				$wp_customize, 
+				'casaItalia_color_control', 
+				array(
+					'label'    => 'Schriftfarbe wählen',
+					'section'  => 'casaItalia_section',
+					'settings' => 'casaItalia_color',
+				)
+			) 
+		);
+		
 
 		// Settings Opacity
 		$wp_customize->add_setting('casaItalia_opacity', array(
@@ -39,18 +52,7 @@
 		));
 
 		
-		// Control Schriftfarbe
-		$wp_customize->add_control( 
-			new WP_Customize_Color_Control( 
-				$wp_customize, 
-				'casaItalia_color_control', 
-				array(
-					'label'    => 'Schriftfarbe wählen',
-					'section'  => 'casaItalia_section',
-					'settings' => 'casaItalia_color',
-				)
-			) 
-		);
+
 		
 		
 	// Section Footer
